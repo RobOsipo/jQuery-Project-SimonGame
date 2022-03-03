@@ -9,7 +9,7 @@ let level = 0;
 
 $('h2').css('color', 'white');
 
-$(document).keypress(function() {
+$(document).keypress(() => {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -18,7 +18,7 @@ $(document).keypress(function() {
 });
 
 $(".btn").click(function() {
-
+  console.log(this)
   let userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
 
